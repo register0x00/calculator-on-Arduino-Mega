@@ -1,6 +1,6 @@
 # Arduino Mega 4x4 Matrix Float Calculator
 
-A standalone hardware calculator firmware written in **C++** (~450+ lines of code) for the **Arduino Mega 2560**. Built to handle full floating-point arithmetic (`float`) using a physical 4x4 matrix keypad with real-time output via the **Serial Monitor**.
+A standalone hardware calculator firmware written in **C++** (489 lines of code) for the **Arduino Mega 2560**. Built to handle full floating-point arithmetic (`float`) using a physical 4x4 matrix keypad with real-time output via the **Serial Monitor**.
 
 ## ⚙️ Hardware & Interface
 * **Microcontroller:** Arduino Mega 2560
