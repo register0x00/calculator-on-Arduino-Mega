@@ -4,8 +4,12 @@ A standalone hardware calculator firmware written in **C++** (~450+ lines of cod
 
 ## ⚙️ Hardware & Interface
 * **Microcontroller:** Arduino Mega 2560
-* **Input Interface:** Physical 4x4 Matrix Keypad
+* **Input Interface:** Physical 4x4 Matrix Keypad, Two Buttons
 * **Output Interface:** Serial Monitor (UART via USB)
+
+
+<img width="3060" height="3489" alt="20260731_181025" src="https://github.com/user-attachments/assets/a1b2efcf-d4f6-4570-88be-800ecf4ef536" />
+
 
 ## 🚀 Key Features
 * **Floating-Point Math (`float`):** Supports decimal point input, negative numbers, and multi-digit floating-point calculations rather than basic integer-only math.
@@ -17,8 +21,8 @@ A standalone hardware calculator firmware written in **C++** (~450+ lines of cod
 
 ## 🔌 Pinout & Wiring
 * **Keypad Rows (R1–R4):** Pins `8, 9, 10, 11`
-* **Keypad Columns (C1–C4):** Pins `A8, A6, A4, A2, A0`
-* **first number - A6, second number - A4, third number - A2, forth number - A0
+* **Keypad Columns (C1–C4):** Pins `A10, A8, A6, A4, A2, A0`
+* **first number - A6, second number - A4, third number - A2, forth number - A0, enter - A8, decimial enter - A10
 * **Serial:** Standard USB connection (`115200` baud)
 
 ## 🛠️ How to Build & Run
