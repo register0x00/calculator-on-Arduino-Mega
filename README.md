@@ -22,7 +22,7 @@ A standalone hardware calculator firmware written in **C++** (489 lines of code)
 ## 🔌 Pinout & Wiring
 * **Keypad Rows (R1–R4):** Pins `8, 9, 10, 11`
 * **Keypad Columns (C1–C4):** Pins `A10, A8, A6, A4, A2, A0`
-* **First number - A6, second number - A4, third number - A2, forth number - A0, enter - A8, decimial enter - A10
+* **First number/+ - A6, second number/- - A4, third number/'*' - A2, forth number// - A0, enter - A8, decimial enter - A10
 * **Serial:** Standard USB connection (`115200` baud)
 
 ## 🛠️ How to Build & Run
