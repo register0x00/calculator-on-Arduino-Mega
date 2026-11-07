@@ -22,7 +22,6 @@ int enter;
 int desiat;
 float schot;
 void setup() {
-  // put your setup code here, to run once:
   Serial.begin(115200);
   pinMode(fl, OUTPUT);
   pinMode(sl, OUTPUT);
@@ -31,10 +30,10 @@ void setup() {
   while(!Serial);
   Serial.println("Calculator");
   schot = 1.00;
-  Schitaem();
+  Math();
 }
-void Schitaem () {
-  Serial.println ("Пожалуйста вбейте первое число на кнопочной матрице");
+void Math () {
+  Serial.println ("Please enter the first number:");
   delay(3000);
   while (enter < 1000) {
   o = 0;
@@ -121,14 +120,14 @@ void Schitaem () {
   }
   delay(3000);
   }
-  Serial.println("Будет ли десятичная часть?");
+  Serial.println("Include decimal part?");
   delay(3000);
   enter = 0;
   chislo = 0;
   des = 0;
   desiat = analogRead(A10);
   if (desiat > 1000) {
-    Serial.println("Пожалуйста вбейте десятичную часть");
+    Serial.println("Please enter the decimal part:");
     while (enter < 1000) {
   o = 0;
   d = 0;
@@ -226,7 +225,7 @@ void Schitaem () {
     }
     Lain = Lain + (des / schot);
   }
-  Serial.print("1 число = ");
+  Serial.print("1st number = ");
   Serial.println(Lain);
   o = 0;
   d = 0;
@@ -241,7 +240,7 @@ void Schitaem () {
   chislo = 0;
   desiat = 0;
   delay(1000);
-  Serial.println ("Пожалуйста вбейте второе число на кнопочной матрице");
+  Serial.println ("Please enter the second number:");
   delay(3000);
   while (enter < 1000) {
   o = 0;
@@ -327,7 +326,7 @@ void Schitaem () {
   delay(3000);
   enter = analogRead(A8);
   }
-  Serial.println("Будет ли десятичная часть?");
+  Serial.println("Include decimal part?");
   delay (3000);
   enter = 0;
   chislo = 0;
@@ -337,7 +336,7 @@ void Schitaem () {
   digitalWrite(tl, LOW);
   desiat = analogRead(A10);
   if (desiat > 1000) {
-    Serial.println("Пожалуйста вбейте десятичную часть");
+    Serial.println("Please enter the decimal part:");
     while (enter < 1000) {
   o = 0;
   d = 0;
@@ -432,7 +431,7 @@ void Schitaem () {
     }
     Wierd = Wierd + (des / schot);
   }
-  Serial.print("2 число = ");
+  Serial.print("2nd number = ");
   Serial.println(Wierd);
   digitalWrite(fl, LOW);
   digitalWrite(sl, LOW);
@@ -444,7 +443,7 @@ void Schitaem () {
   enter = 0;
   digitalWrite(fol, HIGH);
   delay(1000);
-  Serial.println ("Пожалуйста выберите действие");
+  Serial.println ("Please choose mode (+, -. /, *)");
   delay(3000);
   o = analogRead(A6);
   d = analogRead(A4);
@@ -478,14 +477,13 @@ void Schitaem () {
   break;
   case '/':
   if (Wierd == 0) {
-    Serial.println("Ошибка, на ноль делить нельзя");
+    Serial.println("Error");
   } else {
   bat = Lain / Wierd;
   }
   break;
   }
-  Serial.print(Lain); Serial.print(" "); Serial.print(NAVI); Serial.print(" "); Serial.print(Wierd); Serial.print(" = "); Serial.println(bat); Serial.print("Все соединены!");
+  Serial.print(Lain); Serial.print(" "); Serial.print(NAVI); Serial.print(" "); Serial.print(Wierd); Serial.print(" = "); Serial.println(bat);
 }
 
 void loop() {}
-  // put your main code here, to run repeatedly:
